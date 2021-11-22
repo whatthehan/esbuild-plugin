@@ -1,0 +1,27 @@
+yarn run v1.22.17
+$ esno scripts/build.ts
+build for plugin-globals
+remove plugin-globals/es directory
+start build esm with esbuild...
+build esm success
+start build cjs with esbuild...
+build cjs success
+
+
+build for plugin-less
+remove plugin-less/es directory
+start build esm with esbuild...
+build esm success
+start build cjs with esbuild...
+build cjs success
+
+
+build for plugin-postcss
+remove plugin-postcss/es directory
+start build esm with esbuild...
+build esm success
+start build cjs with esbuild...
+build cjs success
+
+
+Done in 0.70s.

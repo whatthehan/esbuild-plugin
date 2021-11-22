@@ -1,0 +1,34 @@
+{
+  "name": "@jarvis-wth/esbuild-plugin-postcss",
+  "version": "0.0.1",
+  "description": "esbuild plugin for postcss",
+  "files": [
+    "es",
+    "lib"
+  ],
+  "types": "es/index.d.ts",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "dependencies": {
+    "esbuild": "^0.13.15",
+    "less": "^4.1.2",
+    "postcss": "^8.3.11",
+    "postcss-modules": "^4.2.2"
+  },
+  "homepage": "https://github.com/whatthehan/esbuild-plugin/package/plugin-less",
+  "bugs": "https://github.com/whatthehan/esbuild-plugin/issues",
+  "authors": [
+    "whatthehan <592029487@qq.com> (https://github.com/whatthehan)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/whatthehan/esbuild-plugin"
+  },
+  "keywords": [
+    "esbuild",
+    "plugin",
+    "less",
+    "react"
+  ],
+  "license": "MIT"
+}

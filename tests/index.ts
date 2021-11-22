@@ -6,6 +6,7 @@ import http from 'http';
 import serve from 'serve-handler';
 import LessPlugin from '../packages/plugin-less/es';
 import GlobalsPlugin from '../packages/plugin-globals/es';
+import PostCSSPlugin from '../packages/plugin-postcss/es';
 
 function resolve(name: string) {
   return path.resolve(__dirname, `./${name}`);
@@ -21,14 +22,19 @@ function resolve(name: string) {
     format: 'cjs',
     minify: true,
     plugins: [
-      LessPlugin({
-        javascriptEnabled: true,
+      PostCSSPlugin({
+        less: {
+          javascriptEnabled: true,
+        },
       }),
-      GlobalsPlugin({
-        react: 'React',
-        'react-dom': 'ReactDOM',
-        antd: 'antd',
-      }),
+      // LessPlugin({
+      //   javascriptEnabled: true,
+      // }),
+      // GlobalsPlugin({
+      //   react: 'React',
+      //   'react-dom': 'ReactDOM',
+      //   antd: 'antd',
+      // }),
     ],
   });
 

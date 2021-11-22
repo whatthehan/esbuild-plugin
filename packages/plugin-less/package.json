@@ -1,5 +1,5 @@
 {
-  "name": "@jarvis-wth/plugin-less",
+  "name": "@jarvis-wth/esbuil-plugin-less",
   "version": "0.0.1",
   "description": "esbuild plugin for less",
   "files": ["es","lib"],
