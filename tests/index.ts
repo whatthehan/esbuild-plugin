@@ -5,6 +5,7 @@ import rimraf from 'rimraf';
 import http from 'http';
 import serve from 'serve-handler';
 import LessPlugin from '../packages/plugin-less/es';
+import GlobalsPlugin from '../packages/plugin-globals/es';
 
 function resolve(name: string) {
   return path.resolve(__dirname, `./${name}`);
@@ -18,10 +19,15 @@ function resolve(name: string) {
     outfile: resolve('dist/bundle.js'),
     bundle: true,
     format: 'cjs',
-    minify: false,
+    minify: true,
     plugins: [
       LessPlugin({
         javascriptEnabled: true,
+      }),
+      GlobalsPlugin({
+        react: 'React',
+        'react-dom': 'ReactDOM',
+        antd: 'antd',
       }),
     ],
   });

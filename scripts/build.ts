@@ -35,10 +35,6 @@ async function build(dir: string, target: 'esm' | 'cjs', deps: string[]) {
 async function main() {
   const dirs = await fs.readdir('packages');
   for (const item of dirs) {
-    if (item !== 'plugin-less') {
-      continue;
-    }
-
     const dir = path.resolve(__dirname, `../packages/${item}`);
     const deps = await getPackageDeps(dir);
 
