@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import { Button } from 'antd';
-import Text from './text';
+// import Text from './text';
+import Module from './module';
 import './style.less';
 
 import 'antd/dist/antd.less';
@@ -12,10 +13,11 @@ const App = () => {
   return (
     <div className="container">
       <p className="center">Hello, ESBuild!</p>
-      <Text text={state.toString()} />
+      {/*<Text text={state.toString()} />*/}
       <Button type="primary" onClick={() => setState((c) => c + 1)}>
         GOT IT!!
       </Button>
+      <Module />
     </div>
   );
 };
